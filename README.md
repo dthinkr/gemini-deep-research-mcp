@@ -4,31 +4,29 @@ MCP server for Google's official Gemini Deep Research Agent via the Interactions
 
 Wraps Google's `deep-research-pro-preview-12-2025` agent, powered by Gemini 3 Pro.
 
-## features
+## Features
 
-- **official deep research agent** - uses google's `deep-research-pro-preview-12-2025` via interactions api
-- **async polling pattern** - non-blocking design, won't freeze your client
-- **quick research fallback** - fast queries using google search grounding
+- **Official Deep Research Agent** - uses Google's `deep-research-pro-preview-12-2025` via Interactions API
+- **Async Polling Pattern** - non-blocking design, won't freeze your client
+- **Quick Research Fallback** - fast queries using Google Search grounding
 
-## installation
+## Installation
 
 ```bash
 npm install -g gemini-deep-research-mcp
 ```
 
-or run directly with npx:
+Or run directly with npx:
 
 ```bash
 npx gemini-deep-research-mcp
 ```
 
-## configuration
+## Configuration
 
-get your api key from [google ai studio](https://aistudio.google.com/).
+Get your API key from [Google AI Studio](https://aistudio.google.com/).
 
-### claude desktop
-
-add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+Add to your MCP client config (Claude Desktop, Cursor, Kiro, etc.):
 
 ```json
 {
@@ -44,35 +42,17 @@ add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
 }
 ```
 
-### cursor / kiro
-
-add to your mcp settings:
-
-```json
-{
-  "mcpServers": {
-    "gemini-deep-research": {
-      "command": "npx",
-      "args": ["gemini-deep-research-mcp"],
-      "env": {
-        "GEMINI_API_KEY": "your-api-key"
-      }
-    }
-  }
-}
-```
-
-## tools
+## Tools
 
 ### start_research
 
-start a deep research task (returns immediately with task_id).
+Start a deep research task (returns immediately with task_id).
 
 ```
 query: "what are the latest developments in quantum computing?"
 ```
 
-returns:
+Returns:
 ```json
 {
   "task_id": "v1_xxx...",
@@ -83,13 +63,13 @@ returns:
 
 ### get_research_status
 
-check research progress and get results.
+Check research progress and get results.
 
 ```
 task_id: "v1_xxx..."
 ```
 
-returns (when completed):
+Returns (when completed):
 ```json
 {
   "task_id": "v1_xxx...",
@@ -100,7 +80,7 @@ returns (when completed):
 
 ### research_with_sources
 
-quick research using google search grounding (returns in seconds).
+Quick research using Google Search grounding (returns in seconds).
 
 ```
 query: "current bitcoin price"
@@ -108,24 +88,24 @@ query: "current bitcoin price"
 
 ### list_research_models
 
-list available research models and agents.
+List available research models and agents.
 
-## usage workflow
+## Usage Workflow
 
-1. call `start_research` with your query → get `task_id`
-2. continue chatting while research runs in background
-3. call `get_research_status` to check progress
-4. when status is "completed", get full research report
+1. Call `start_research` with your query → get `task_id`
+2. Continue chatting while research runs in background
+3. Call `get_research_status` to check progress
+4. When status is "completed", get full research report
 
-## why this mcp?
+## Why This MCP?
 
-this mcp wraps google's **official** deep research agent, which:
+This MCP wraps Google's **official** Deep Research Agent, which:
 
-- uses gemini 3 pro as reasoning core
-- achieves 46.4% on humanity's last exam (sota)
-- performs multi-step web research with citations
-- trained specifically to reduce hallucinations
+- Uses Gemini 3 Pro as reasoning core
+- Achieves 46.4% on Humanity's Last Exam (SOTA)
+- Performs multi-step web research with citations
+- Trained specifically to reduce hallucinations
 
-## license
+## License
 
 MIT
