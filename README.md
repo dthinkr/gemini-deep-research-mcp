@@ -97,9 +97,9 @@ List available research models and agents.
 3. Call `get_research_status` to check progress
 4. When status is "completed", get full research report
 
-## Why This MCP?
+## About the Interactions API
 
-This MCP wraps Google's **official** Deep Research Agent, which:
+This MCP wraps Google's [Interactions API](https://ai.google.dev/gemini-api/docs/deep-research) and the `deep-research-pro-preview-12-2025` agent, which:
 
 - Uses Gemini 3 Pro as reasoning core
 - Achieves 46.4% on Humanity's Last Exam (SOTA)
