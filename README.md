@@ -24,12 +24,6 @@ npx gemini-deep-research-mcp
 
 ## configuration
 
-### environment variables
-
-```bash
-export GEMINI_API_KEY="your-api-key"
-```
-
 get your api key from [google ai studio](https://aistudio.google.com/).
 
 ### claude desktop
