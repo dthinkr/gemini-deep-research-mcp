@@ -99,12 +99,7 @@ List available research models and agents.
 
 ## About the Interactions API
 
-This MCP wraps Google's [Interactions API](https://ai.google.dev/gemini-api/docs/deep-research) and the `deep-research-pro-preview-12-2025` agent, which:
-
-- Uses Gemini 3 Pro as reasoning core
-- Achieves 46.4% on Humanity's Last Exam (SOTA)
-- Performs multi-step web research with citations
-- Trained specifically to reduce hallucinations
+This MCP wraps Google's [Interactions API](https://ai.google.dev/gemini-api/docs/deep-research) and the `deep-research-pro-preview-12-2025` agent.
 
 ## License
 
